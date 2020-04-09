@@ -3,18 +3,16 @@ package com.taotao.entity;
 import java.io.Serializable;
 import java.util.Date;
 
-public class TbItemCat implements Serializable {
+public class TbUser implements Serializable {
     private Long id;
 
-    private Long parentId;
+    private String username;
 
-    private String name;
+    private String password;
 
-    private Integer status;
+    private String phone;
 
-    private Integer sortOrder;
-
-    private Boolean isParent;
+    private String email;
 
     private Date created;
 
@@ -30,44 +28,36 @@ public class TbItemCat implements Serializable {
         this.id = id;
     }
 
-    public Long getParentId() {
-        return parentId;
+    public String getUsername() {
+        return username;
     }
 
-    public void setParentId(Long parentId) {
-        this.parentId = parentId;
+    public void setUsername(String username) {
+        this.username = username == null ? null : username.trim();
     }
 
-    public String getName() {
-        return name;
+    public String getPassword() {
+        return password;
     }
 
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
+    public void setPassword(String password) {
+        this.password = password == null ? null : password.trim();
     }
 
-    public Integer getStatus() {
-        return status;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setStatus(Integer status) {
-        this.status = status;
+    public void setPhone(String phone) {
+        this.phone = phone == null ? null : phone.trim();
     }
 
-    public Integer getSortOrder() {
-        return sortOrder;
+    public String getEmail() {
+        return email;
     }
 
-    public void setSortOrder(Integer sortOrder) {
-        this.sortOrder = sortOrder;
-    }
-
-    public Boolean getIsParent() {
-        return isParent;
-    }
-
-    public void setIsParent(Boolean isParent) {
-        this.isParent = isParent;
+    public void setEmail(String email) {
+        this.email = email == null ? null : email.trim();
     }
 
     public Date getCreated() {
@@ -93,11 +83,10 @@ public class TbItemCat implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", parentId=").append(parentId);
-        sb.append(", name=").append(name);
-        sb.append(", status=").append(status);
-        sb.append(", sortOrder=").append(sortOrder);
-        sb.append(", isParent=").append(isParent);
+        sb.append(", username=").append(username);
+        sb.append(", password=").append(password);
+        sb.append(", phone=").append(phone);
+        sb.append(", email=").append(email);
         sb.append(", created=").append(created);
         sb.append(", updated=").append(updated);
         sb.append(", serialVersionUID=").append(serialVersionUID);

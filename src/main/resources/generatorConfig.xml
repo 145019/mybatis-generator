@@ -7,8 +7,10 @@
 <!--    <classPathEntry location="该jar包的位置\mysql\mysql-connector-java\8.0.15\mysql-connector-java-8.0.15.jar" />-->
 
     <context id="msqlTables" targetRuntime="MyBatis3">
-
+        <!--配置生成pojo的序列化的插件-->
         <plugin type="org.mybatis.generator.plugins.SerializablePlugin"></plugin>
+        <!--实体类重写toString-->
+        <plugin type="org.mybatis.generator.plugins.ToStringPlugin" />
         <commentGenerator>
             <!--
                      suppressAllComments属性值：
@@ -68,6 +70,16 @@
                enableSelectByExample="false" selectByExampleQueryId="false" >
             <property name="useActualColumnNames" value="false"/>
         </table>-->
+        <table tableName="tb_content" ></table>
+        <table tableName="tb_content_category" ></table>
+        <table tableName="tb_item" ></table>
         <table tableName="tb_item_cat" ></table>
+        <table tableName="tb_item_desc" ></table>
+        <table tableName="tb_item_param" ></table>
+        <table tableName="tb_item_param_item" ></table>
+        <table tableName="tb_order" ></table>
+        <table tableName="tb_order_item" ></table>
+        <table tableName="tb_order_shipping" ></table>
+        <table tableName="tb_user"></table>
     </context>
 </generatorConfiguration>

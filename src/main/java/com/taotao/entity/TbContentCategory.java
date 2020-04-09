@@ -3,7 +3,7 @@ package com.taotao.entity;
 import java.io.Serializable;
 import java.util.Date;
 
-public class TbItemCat implements Serializable {
+public class TbContentCategory implements Serializable {
     private Long id;
 
     private Long parentId;
